@@ -65,6 +65,10 @@ var config = {
         onlyTemp: true,
       }
     },
+    {
+        module: "MMM-Sonos",
+        position: "bottom_right",
+    }
   ]
 };
 
