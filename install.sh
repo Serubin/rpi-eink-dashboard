@@ -14,7 +14,7 @@ echo "Installing magicmirror dependencies..."
 
 npm install &> /dev/null
 
-cp -a ../magicmirror-files/* .
+cp -a ../magicmirror-files/* ../$magicmirror/
 
 cd - > /dev/null
 echo "done."
