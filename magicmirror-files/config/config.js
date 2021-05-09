@@ -59,7 +59,7 @@ var config = {
       config: {
         weatherProvider: "openweathermap",
         type: "current",
-        location: "San Francisco",
+        location: "Outdoor",
         locationID: "5391959", //ID from http://bulk.openweathermap.org/sample/city.list.json.gz; unzip the gz file and find your city
         apiKey: "OPEN_WEATHER_API_KEY",
         onlyTemp: true,
