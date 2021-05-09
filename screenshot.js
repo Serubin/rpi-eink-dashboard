@@ -23,6 +23,8 @@ global.gConfig = config;
 const fileName = 'screenshot.png';
 let d = new Date();
 
+console.log("Starting new capture process");
+
 const job = new CronJob({
 
   cronTime: global.gConfig.refresh_interval,
@@ -33,6 +35,7 @@ const job = new CronJob({
     debug('Display refresh START at', d);
 
     (async () => {
+      console.log("Generating new capture.");
 
       // open puppeteer
       const browser = await puppeteer.launch({
@@ -90,6 +93,8 @@ const job = new CronJob({
         const date = new Date();
         if(code===0) debug('Display refresh END at', date);
       });
+
+      console.log("Done.")
 
     })();
 
