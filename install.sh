@@ -7,6 +7,12 @@ echo
 echo "Cloning Magicmirror."
 git clone https://github.com/MichMich/MagicMirror.git --depth 1 $magicmirror_dir 2> /dev/null || echo "Skipping: Repo already cloned"
 
+echo
+echo "Downloading other modules"
+git submodule init &> /dev/null
+
+git submodule update --recursive --init &> /dev/null
+
 cd $magicmirror_dir
 
 echo
