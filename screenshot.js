@@ -74,7 +74,7 @@ const job = new CronJob({
       }
 
       // run the python script to display the screenshots on the eink display
-      const childPython = spawn('python', ['./ePaperPython/main.py']);
+      const childPython = spawn('python', ['./eink.py']);
 
       childPython.stdout.on('data', (data) => {
         debugChildP(data.toString());
