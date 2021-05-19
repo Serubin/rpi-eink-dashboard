@@ -1,0 +1,23 @@
+{% if current %}
+    <div class="wrap-flex">
+        {% if config.title %}
+            <header class="sideways">{{config.title}}</header>
+        {% endif %}
+        <div class="large light wrap-flex">
+            {% if config.showIcon %}
+                <span class="wi weathericon wi-{{current.weatherType}}"></span>
+            {% endif %}
+            <span class="bright">
+                {{ current[config.showValue] | roundValue }}
+                <sup class="units">{{ "" | unit(config.showValue) }}</sup>
+            </span>
+        </div>
+    </div>
+{% else %}
+    <div class="dimmed light small">
+        {{ "LOADING" | translate }}
+    </div>
+{% endif %}
+
+<!-- Uncomment the line below to see the contents of the `current` object. -->
+<!-- <div style="word-wrap:break-word" class="xsmall dimmed">{{current | dump}}</div> -->
