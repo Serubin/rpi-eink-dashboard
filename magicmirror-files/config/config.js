@@ -48,14 +48,14 @@ var config = {
     },
     {
       module: "better-clock",
-      position: "top_right",
+      position: "top_left",
       config: {
         displaySeconds: false,
       },
     },
     {
       module: "weather-simple",
-      position: "top_left",
+      position: "top_right",
       config: {
         title: "Outdoor",
         weatherProvider: "openweathermap",
@@ -67,7 +67,7 @@ var config = {
     },
     {
       module: "weather-simple",
-      position: "top_left",
+      position: "top_right",
       config: {
         title: "Indoor",
         weatherProvider: "kaiterra",
@@ -79,7 +79,7 @@ var config = {
     },
     {
       module: "weather-simple",
-      position: "top_left",
+      position: "top_right",
       config: {
         title: "AQI",
         weatherProvider: "kaiterra",
@@ -92,7 +92,7 @@ var config = {
     },
     {
       module: "weather-simple",
-      position: "top_left",
+      position: "top_right",
       config: {
         title: "CO2",
         weatherProvider: "kaiterra",
@@ -105,20 +105,20 @@ var config = {
     },
     {
       module: "weather-simple",
-      position: "top_left",
+      position: "top_right",
       config: {
-        title: "Humidity",
+        title: "AQI",
         weatherProvider: "kaiterra",
-        type: "indoor-humidity",
+        type: "indoor-aqi",
         deviceId: "DEVICE_ID",
         apiKey: "KAITERRA_API",
         showIcon: false,
-        showValue: "humidity",
+        showValue: "pm25",
       }
     },
     {
         module: "MMM-Sonos",
-        position: "bottom_right",
+        position: "bottom_left",
     }
   ]
 };

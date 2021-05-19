@@ -106,15 +106,18 @@ header {
 }
 
 header.sideways {
-  writing-mode: sideways-lr;
   border-bottom: unset;
   border-right: 1px solid #fff;
   margin-right: 15px;
   line-height: 28px;
+  writing-mode: vertical-rl;
+  -webkit-writing-mode: vertical-rl;
+  transform: rotate(180deg);
 }
 
 .wrap-flex {
   display: flex;
+  flex: auto;
 }
 
 .weather-simple .bright {
@@ -124,6 +127,11 @@ header.sideways {
 sup.units {
   font-size: 40%;
   padding: 0 0.3em 0;
+}
+
+sup.units[data-unit="µg/m³"] {
+  transform: rotate(90deg);
+  margin-left: -1.8em;
 }
 
 sup {

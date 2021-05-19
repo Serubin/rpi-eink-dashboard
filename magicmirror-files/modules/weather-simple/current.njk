@@ -1,17 +1,17 @@
 {% if current %}
     <div class="wrap-flex">
-        {% if config.title %}
-            <header class="sideways">{{config.title}}</header>
-        {% endif %}
         <div class="large light wrap-flex">
             {% if config.showIcon %}
                 <span class="wi weathericon wi-{{current.weatherType}}"></span>
             {% endif %}
             <span class="bright">
                 {{ current[config.showValue] | roundValue }}
-                <sup class="units">{{ "" | unit(config.showValue) }}</sup>
+                <sup class="units" data-unit="{{ "" | unit(config.showValue)}}">{{ "" | unit(config.showValue) }}</sup>
             </span>
         </div>
+        {% if config.title %}
+            <header class="sideways">{{config.title}}</header>
+        {% endif %}
     </div>
 {% else %}
     <div class="dimmed light small">
