@@ -54,15 +54,66 @@ var config = {
       },
     },
     {
-      module: "weather",
+      module: "weather-simple",
       position: "top_left",
       config: {
+        title: "Outdoor",
         weatherProvider: "openweathermap",
-        type: "current",
-        location: "Outdoor",
+        type: "outdoor",
         locationID: "5391959", //ID from http://bulk.openweathermap.org/sample/city.list.json.gz; unzip the gz file and find your city
         apiKey: "OPEN_WEATHER_API_KEY",
-        onlyTemp: true,
+        showIcon: false,
+      }
+    },
+    {
+      module: "weather-simple",
+      position: "top_left",
+      config: {
+        title: "Indoor",
+        weatherProvider: "kaiterra",
+        type: "indoor-temp",
+        deviceId: "DEVICE_ID",
+        apiKey: "KAITERRA_API",
+        showIcon: false,
+      }
+    },
+    {
+      module: "weather-simple",
+      position: "top_left",
+      config: {
+        title: "AQI",
+        weatherProvider: "kaiterra",
+        type: "indoor-aqi",
+        deviceId: "DEVICE_ID",
+        apiKey: "KAITERRA_API",
+        showIcon: false,
+        showValue: "pm25",
+      }
+    },
+    {
+      module: "weather-simple",
+      position: "top_left",
+      config: {
+        title: "CO2",
+        weatherProvider: "kaiterra",
+        type: "indoor-co2",
+        deviceId: "DEVICE_ID",
+        apiKey: "KAITERRA_API",
+        showIcon: false,
+        showValue: "co2",
+      }
+    },
+    {
+      module: "weather-simple",
+      position: "top_left",
+      config: {
+        title: "Humidity",
+        weatherProvider: "kaiterra",
+        type: "indoor-humidity",
+        deviceId: "DEVICE_ID",
+        apiKey: "KAITERRA_API",
+        showIcon: false,
+        showValue: "humidity",
       }
     },
     {
