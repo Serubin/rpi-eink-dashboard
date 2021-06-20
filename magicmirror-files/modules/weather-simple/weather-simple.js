@@ -192,7 +192,7 @@ Module.register("weather-simple", {
 				} else if (type === "humidity") {
                     value += "%";
                 } else if (type === "co2") {
-                    value += "µg/m³";
+                    value += "ppm";
                 }
 
 				return value;
