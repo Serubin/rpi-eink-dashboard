@@ -1,0 +1,34 @@
+.sonos {
+    max-width: 330px;
+}
+
+.ticker {
+    display: block;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.metadata {
+    display: inline-flex;
+}
+.metadata > span {
+    display: flex;
+    justify-items: center;
+}
+.metadata > span:not(:last-child) {
+    margin-right: 0.5em;
+}
+.metadata .group-name {
+    max-width: 150px;
+}
+
+.feather {
+    width: 1.2em;
+    height: 1.2em;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill: none;
+}
