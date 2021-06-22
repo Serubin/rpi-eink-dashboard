@@ -127,8 +127,6 @@ Module.register("weather-simple", {
 		this.updateDom(0);
 		this.scheduleUpdate();
 
-        console.log(this.config.type, this.weatherProvider.currentWeather());
-
 		if (this.weatherProvider.currentWeather() && this.weatherProvider.currentWeather().weatherType) {
 			this.sendNotification("CURRENTWEATHER_TYPE", { type: this.weatherProvider.currentWeather().weatherType.replace("-", "_") });
 		}
