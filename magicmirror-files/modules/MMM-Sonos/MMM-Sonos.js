@@ -84,14 +84,16 @@ Module.register('MMM-Sonos', {
         }
     },
 
-    getDom: function () {
-        if (Object.values(this.items).length === 0) {
-            this.items = [{track: { title: 'No track playing', duration: 0 }, state: 'playing', volume: 0, group: {Name: 'Sonos'}}];
+  getDom: function () {
+        let items = Object.values(this.items);
+        if (items.filter(item => item.state === 'playing' && item.track).length === 0) {
+            const group = items[0] ? items[0].group : {Name: 'Sonos'};
+            items = [{track: { title: 'No track playing', duration: 0 }, state: 'playing', volume: 0, group}];
         }
 
         const container = document.createElement('div');
         container.className = 'sonos light';
-        container.append(...Object.values(this.items)
+        container.append(...items
             .filter(item => item.state === 'playing' && item.track)
             .map(item => {
                 const container = document.createElement('div');

@@ -126,7 +126,7 @@ header.sideways {
 
 sup.units {
   font-size: 40%;
-  padding: 0 0.3em 0;
+  padding: 0 0.6em 0;
 }
 
 sup.units[data-unit="ppm"] {
