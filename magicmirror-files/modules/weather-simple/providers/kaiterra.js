@@ -75,7 +75,7 @@ WeatherProvider.register("kaiterra", {
 		currentWeather.humidity = info.data.humidity;
         currentWeather.pm10 = info.data.pm10;
         currentWeather.pm25 = info.data.pm25;
-        //currentWeather.aqi = calculateAQI({pm25: currentWeather.pm25});
+        currentWeather.aqi = getAqiFromPM25(currentWeather.pm25);
         currentWeather.co2 = info.data["rco2 (ppm)"];
         currentWeather.temperature = info.data.temp;
 
