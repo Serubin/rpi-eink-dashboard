@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start:display": "node index.js",
+    "start:mirror": "node ./magicmirror/serveronly/index.js",
     "start": "node index.js",
     "debug": "DEBUG=puppeteer,puppeteer:cpPython node index.js",
     "debugFull": "DEBUG=puppeteer:*, node index.js"
