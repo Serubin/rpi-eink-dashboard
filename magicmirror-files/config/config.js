@@ -113,7 +113,7 @@ var config = {
         deviceId: "DEVICE_ID",
         apiKey: "KAITERRA_API",
         showIcon: false,
-        showValue: "pm25",
+        showValue: "aqi",
       }
     },
     {
